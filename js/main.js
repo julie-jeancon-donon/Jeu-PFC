@@ -7,7 +7,7 @@ while (pcScore < 3 && playerScore < 3) {
   var player = prompt("pierre, feuille, ciseaux?").toLowerCase();
 
   while ((player != "pierre") && (player != "feuille") && (player != "ciseaux")) {
-    player = prompt("Non Boubourse! Pierre, feuille ou ciseaux?!").toLowerCase();
+    player = prompt("Non gros mâlin! Pierre, feuille ou ciseaux?!").toLowerCase();
   }
 
   var random = Math.floor(Math.random()*3);
@@ -21,12 +21,12 @@ while (pcScore < 3 && playerScore < 3) {
     random = "ciseaux";
   }
 
-
+ 
   if (random === "feuille") {
 
     if (player === "pierre") {
       pcScore ++;
-      alert("loser!");
+      alert("you lose!");
 
     }
 
@@ -54,7 +54,7 @@ while (pcScore < 3 && playerScore < 3) {
 
     else {
       pcScore ++;
-      alert("loser!");
+      alert("you lose!");
     }
 
 
@@ -68,7 +68,7 @@ while (pcScore < 3 && playerScore < 3) {
 
     else if (player === "feuille"){
       pcScore ++;
-      alert("loser!");
+      alert("you lose!");
     }
 
     else{
