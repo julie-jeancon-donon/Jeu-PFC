@@ -21,7 +21,7 @@ while (pcScore < 3 && playerScore < 3) {
     random = "ciseaux";
   }
 
- 
+
   if (random === "feuille") {
 
     if (player === "pierre") {
@@ -81,9 +81,9 @@ while (pcScore < 3 && playerScore < 3) {
 }
 
 if (pcScore === 3) {
-  alert("Loser!");
+  alert("La partie est finie... Loser!");
 }
 
 else {
-  alert("Champion!");
+  alert("La partie est finie! Champion!");
 }
