@@ -4,24 +4,168 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Pierre,feuille,ciseaux?</title>
+  <title>PFC Harry Potter?</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
   <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.css.map">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css.map">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css.map">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
+  <link rel="stylesheet" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.css.map">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css.map">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
-  <!-- Add your site or application content here -->
+  <div class="container-fluid">
+
+    <div class="row">
+      <!-- input pseudo utilisateur-->
+      <div class="text-center offset-3 col-6 pt-2"  id="container_input_pseudo">
+        <p> Choisis ton nom de sorcier !</p>
+        <input id="pseudo_user" type="text">
+        <input id="send_pseudo" value="c'est parti!" type="button">
+      </div>
+    </div>
+  </div>
+
+
+  <div id="rules">
+    <p>
+      Prêt à jouer contre Lord Voldemort? Voici les règles:
+    </p>
+    <p>
+      <img src="img/petrificus.jpg" alt="petrificus totalus"> gagne contre <img src="img/expeliarmus.jpg" alt="expeliarmus"> et perd contre <img src="img/stupefix.jpg" alt="stupefix"></br>
+    </p>
+    <p>
+      <img src="img/stupefix.jpg" alt="stupefix"> gagne contre <img src="img/petrificus.jpg" alt="petrificus totalus"> et perd contre <img src="img/expeliarmus.jpg" alt="expeliarmus"></br>
+    </p>
+    <p>
+      <img src="img/expeliarmus.jpg" alt="expeliarmus"> gange contre <img src="img/stupefix.jpg" alt="stupefix"> et perd contre <img src="img/petrificus.jpg" alt="petrificus totalus">
+    </p>
+
+    <div class="col-3 mx-auto">
+      <input id="click_rules" value="Méfaits accomplis" type="button">
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+        <div class="text-center offset-3 col-6 pt-5" id="avatar-choice">
+
+
+          <div class="d-flex justify-content w-100">
+            <img class="h-100" src="img/hermione2.png" alt="hermione" id="hermione">
+            <img class="h-100" src="img/harry2.png" alt="harry" id="harry">
+            <img class="h-100" src="img/ron2.png" alt="ron" id="ron">
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Trigger/Open The Modal -->
+ <button id="myBtn">Règles du jeu</button>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+
+   <!-- Modal content -->
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <p class="text-dark">
+         <img src="img/petrificus.jpg" alt="petrificus totalus"> gagne contre <img src="img/expeliarmus.jpg" alt="expeliarmus"> et perd contre <img src="img/stupefix.jpg" alt="stupefix"></br>
+    </p>
+    <p class="text-dark">
+         <img src="img/stupefix.jpg" alt="stupefix"> gagne contre <img src="img/petrificus.jpg" alt="petrificus totalus"> et perd contre <img src="img/expeliarmus.jpg" alt="expeliarmus"></br>
+    </p>
+    <p class="text-dark">
+         <img src="img/expeliarmus.jpg" alt="expeliarmus"> gange contre <img src="img/stupefix.jpg" alt="stupefix"> et perd contre <img src="img/petrificus.jpg" alt="petrificus totalus">
+    </p>
+
+
+   </div>
+
+ </div>
+
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div id="score" class="tabscore">
+        <p id="player_name"></p>
+        <p id="playerScore" class="ml-3">0</p>
+        <p> - </p>
+        <p id="pcScore" class="mr-3">0</p>
+        <p>Voldi</p>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="container-fluid">
+
+    <div class="row pfcgame">
+
+      <div class="text-center col-6" id="pfc">
+        <p id="player_rock" onclick="battle('pierre')"><img src="img/petrificus.jpg"></p>
+        <p id="player_paper" onclick="battle('feuille')"><img src="img/stupefix.jpg"></p>
+        <p id="player_scissors" onclick="battle('ciseaux')"><img src="img/expeliarmus.jpg"></p>
+      </div>
+
+      <div class="text-center col-6" id="pfc2">
+        <p><img id="pc_rock" src="img/petrificus.jpg"></p>
+        <p><img id="pc_paper" src="img/stupefix.jpg"></p>
+        <p><img id="pc_scissors" src="img/expeliarmus.jpg"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+    <p id="choice_pc"></p>
+
+
+
+    <div id="end" class="text-center offset-3 col-6">
+      <p id="result"></p>
+      <img class="mx-auto voldi" src="img/voldi.gif" alt="voldemort" id="img_lose">
+      <img class="mx-auto" src="img/dumbledore.gif" alt="dumbledore dances" id="img_win">
+
+      <input id="replay" type="button" value="Rejouez!">
+    </div>
+
+
+
+
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

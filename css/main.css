@@ -96,18 +96,145 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face{
+  font-family: "harryp";
+  src: url(../Font/HARRYP__.TTF);
+}
+
+  body{
+  background-image:url(../img/Poudlard_en_flamme.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: 'harryp';
+  font-size: 30px;
+}
+
+#container_input_pseudo{
+  font-size: 40px;
+  margin-top: 350px;
+}
+
+ .pfcgame {
+  margin-top: 60px;
+}
+
+.tabscore{
+  width:100%;
+  text-align: center;
+  font-size: 30px;
+
+}
+.tabscore p{
+  font-size: 45px;
+  display: inline-block;
+}
+
+#choice_pc{
+  display: none;
+}
+
+#img_lose, #img_win{
+  width: 500px;
+}
 
 
 
+#pfc, #pfc2{
+position: relative;
+}
+
+#player_rock, #player_paper, #player_scissors{
+  position: absolute;
+  left: 180px;
+}
+
+#player_paper{
+  top: 165px;
+}
+
+#player_scissors{
+  top: 330px;
+}
+
+#pc_rock, #pc_paper,#pc_scissors{
+  position: absolute;
+}
+
+#pc_paper{
+  top: 165px;
+}
+
+#pc_scissors{
+  top: 330px;
+}
 
 
+#rules{
+  background-image:url(../img/parchemin.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+  padding-top: 90px;
+  color: black;
+}
+
+#rules img{
+  width: 100px;
+}
+#rules p{
+  padding-bottom: 15px;
+}
+
+#result{
+  font-size: 50px;
+}
+
+#replay{
+  margin-top: 20px;
+  font-size: 40px;
+}
 
 
+/* The Modal (background) */
+.modal {
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+.modal p{
+  padding-left: 100px;
+}
 
+/* Modal Content/Box */
+.modal-content {
+   background-color: #fefefe;
+   margin: 15% auto; /* 15% from the top and centered */
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%; /* Could be more or less, depending on screen size */
+}
 
+/* The Close Button */
+.close {
+   color: #aaa;
+   font-size: 28px;
+}
 
-
+.close:hover,
+.close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+}
 
 
 
